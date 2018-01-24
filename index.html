@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/league.css">
+  <link rel="stylesheet" href="css/overrides.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <section>
+        <img src="images/ionic.png" class="logo" style="max-width: 600px">
+        <h4 style="line-height: 40px; margin-top: 30px;">Introduction to Ionic 3</h4>
+      </section>
+
+      <!-- Slide 2 -->
+      <section>
+        <div style="display: flex; justify-content: center">
+          <div style="align-self: center;">
+            <img src="images/guycircle.png" style="max-width: 260px; max-height: 260px; border-radius: 50%; border: 0;">
+          </div>
+          <div style="text-align: left; padding-left: 60px;">
+            <h2>Guy Nesher</h2>
+            <p>Developer at
+              <a href="http://codevalue.net/" target="_blank">Codevalue</a>
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section>
+        <h2>Hybrid Applications</h2>
+        <ul>
+          <li>Just a Web Application</li>
+          <li>Running in a browser</li>
+          <li>Within a Native Mobile Application</li>
+        </ul>
+      </section>
+
+      <!-- Slide 4 -->
+      <section>
+        <h2>Ionic Application Scheme</h2>
+        <div layout="column" flex="" layout-align="center center" style="margin-left: 10px">
+          <div class="box js fragment zoom-in visible" data-fragment-index="0">
+            <img src="images/js-logo.png" style="margin: 0; height: 48px; position: absolute; left: 20px;"> Your JavaScript Code
+          </div>
+          <div class="box ionic fragment zoom-in visible" data-fragment-index="1">
+            <img src="images/ionic-logo-square-white.png" style="margin: 0; height: 48px; position: absolute; left: 20px;"> Ionic
+          </div>
+          <div class="box angular fragment zoom-in visible" data-fragment-index="2">
+            <img src="images/angular-logo.png" style="margin: 0; height: 48px; position: absolute; left: 20px;"> Angular*
+          </div>
+          <div class="box webview fragment zoom-in visible" data-fragment-index="3">
+            <img src="images/wkwebview-logo.png" style="margin: 0; height: 48px; position: absolute; left: 20px;"> Browser
+            <img src="images/chrome-logo.png" style="bottom: 10px; margin: 0; height: 48px; position: absolute; right: 10px;">
+          </div>
+          <div class="box fragment zoom-in visible" data-fragment-index="4">
+            <img src="images/cordova.png" style="margin: 0; height: 48px; position: absolute; left: 20px;"> Cordova*
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5 -->
+      <section>
+        <h2>Ionic Is</h2>
+        <ul>
+          <li>A Set Of Mobile Friendly UI Components</li>
+          <li>A CLI</li>
+          <li>A Set Of Plugins For Native Functionality</li>
+        </ul>
+      </section>
+
+      <!-- Slide 6 -->
+      <section>
+        <h2>UI Components</h2>
+        <ul>
+          <li>Large Set Of Components</li>
+          <li>Built In Theme Support (via SASS)</li>
+          <li>Specific OS Design</li>
+          <li>Excelent Documentation</li>
+        </ul>
+      </section>
+
+      <!-- Slide 7 -->
+      <section>
+        <h2>Modern CLI</h2>
+        <ul>
+          <li>Powered by NPM / Webpack</li>
+          <li>Wraps the Angular CLI (with minor changes)</li>
+          <li>Wraps the Cordova CLI</li>
+        </ul>
+        <pre><code>npm install -g cordova ionic</code></pre>
+        <pre><code>ionic start myApp tabs</code></pre>
+      </section>
+
+      <!-- Slide 8 -->
+      <section>
+        <h2>Plugins</h2>
+        <ul>
+          <li>Large List Of Plugins For (almost) Every Usecase</li>
+          <li>Easy To Install / Manage</li>
+          <li>Curated - Support Level Varies</li>
+        </ul>
+      </section>
+
+      <!-- Slide 9 -->
+      <section>
+        <h2>But What About Performance</h2>
+        <img class="fragment" src="images/performance.jpg">
+      </section>
+
+      <!-- Slide 10 -->
+      <section>
+        <h2>Ionic Component / Page</h2>
+        <pre><code data-trim>
+        <ion-header>
+          <ion-navbar>
+            <ion-title>Title</ion-title>
+          </ion-navbar>
+          <ion-toolbar>
+            <ion-title>Sub Title</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        
+        <ion-content>
+          // you code goes here
+        </ion-content>					
+      </code></pre>
+      </section>
+
+      <!-- Slide 11 -->
+      <section class="img_container">
+        <h2>Navigation</h2>
+        <img src="images/navigation.png">
+      </section>
+
+      <!-- Slide 12 -->
+      <section class="img_container">
+        <h2>Ion Content</h2>
+        <ul>
+          <li>A Simple Wrapper For Content</li>
+          <li>Exposes Helpful Methods & Properties:
+            <ul>
+              <li>Scrolling</li>
+              <li>Resizing</li>
+              <li>Theme Design</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Slide 13 -->
+      <section>
+        <h2>Finding The Sweet Spot</h2>
+        <ul>
+          <li>Perfect for CRUD applications</li>
+          <li>Access Native Capabilities - Through Plugins</li>
+          <li>Try To Avoid Heavy Processing / Complex Animations</li>
+          <li>Multiple Apps Have Been Featured in Apples Best Of The Year Lists</li>
+        </ul>
+      </section>
+
+      <!-- Slide 14 -->
+      <section>
+        <h2>Using Plugins</h2>
+        <pre><code>npm install @ionic-native/camera --save</code></pre>
+        <pre><code>ionic cordova plugin add cordova-plugin-camera</code></pre>
+        <ul>
+          <li>Contain Two Parts:
+            <ul>
+              <li>Ionic Container</li>
+              <li>Cordova Plugin</li>
+            </ul>
+          </li>
+          <li>Plugins Are Angular Services</li>
+          <li>Can Be Treated As Promies Or Observables</li>
+        </ul>
+      </section>
+
+      <!-- Slide 15 -->
+      <section>
+        <h1>Demo</h1>
+      </section>
+
+      <!-- Slide 16 -->
+      <section>
+        <h1>Questions</h1>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+</body>
+
+</html>
