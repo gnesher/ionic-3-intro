@@ -53,9 +53,10 @@
       <section>
         <h2>Hybrid Applications</h2>
         <ul>
-          <li>Just a Web Application</li>
+          <li>Just a Web Application (HTML/Javascript/CSS)</li>
           <li>Running in a browser</li>
           <li>Within a Native Mobile Application</li>
+          <li class="fragment">https://goo.gl/fFDrcR</li>
         </ul>
       </section>
 
@@ -82,14 +83,20 @@
         </div>
       </section>
 
+      <!-- Slide 9 -->
+      <section>
+        <h2>But What About Performance</h2>
+        <img class="fragment" src="images/performance.jpg">
+      </section>
+
       <!-- Slide 5 -->
       <section>
-        <h2>Ionic Is</h2>
-        <ul>
+        <h2>Ionic Has 3 Parts</h2>
+        <ol>
           <li>A Set Of Mobile Friendly UI Components</li>
           <li>A CLI</li>
           <li>A Set Of Plugins For Native Functionality</li>
-        </ul>
+        </ol>
       </section>
 
       <!-- Slide 6 -->
@@ -101,6 +108,25 @@
           <li>Specific OS Design</li>
           <li>Excelent Documentation</li>
         </ul>
+      </section>
+
+      <!-- Slide 10 -->
+      <section>
+        <h2>Ionic Component Example</h2>
+        <pre><code data-trim>
+          <ion-content>
+            <ion-item-group>
+              <ion-item-divider color="light">A</ion-item-divider>
+              <ion-item>Angola</ion-item>
+              <ion-item>Argentina</ion-item>
+            </ion-item-group>
+          </ion-content>
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Ionic Component Example</h2>
+        <img src="images/list.png">
       </section>
 
       <!-- Slide 7 -->
@@ -125,66 +151,9 @@
         </ul>
       </section>
 
-      <!-- Slide 9 -->
-      <section>
-        <h2>But What About Performance</h2>
-        <img class="fragment" src="images/performance.jpg">
-      </section>
-
-      <!-- Slide 10 -->
-      <section>
-        <h2>Ionic Component / Page</h2>
-        <pre><code data-trim>
-        <ion-header>
-          <ion-navbar>
-            <ion-title>Title</ion-title>
-          </ion-navbar>
-          <ion-toolbar>
-            <ion-title>Sub Title</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        
-        <ion-content>
-          // you code goes here
-        </ion-content>					
-      </code></pre>
-      </section>
-
-      <!-- Slide 11 -->
-      <section class="img_container">
-        <h2>Navigation</h2>
-        <img src="images/navigation.png">
-      </section>
-
-      <!-- Slide 12 -->
-      <section class="img_container">
-        <h2>Ion Content</h2>
-        <ul>
-          <li>A Simple Wrapper For Content</li>
-          <li>Exposes Helpful Methods & Properties:
-            <ul>
-              <li>Scrolling</li>
-              <li>Resizing</li>
-              <li>Theme Design</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Slide 13 -->
-      <section>
-        <h2>Finding The Sweet Spot</h2>
-        <ul>
-          <li>Perfect for CRUD applications</li>
-          <li>Access Native Capabilities - Through Plugins</li>
-          <li>Try To Avoid Heavy Processing / Complex Animations</li>
-          <li>Multiple Apps Have Been Featured in Apples Best Of The Year Lists</li>
-        </ul>
-      </section>
-
       <!-- Slide 14 -->
       <section>
-        <h2>Using Plugins</h2>
+        <h2>Installing A Plugin</h2>
         <pre><code>npm install @ionic-native/camera --save</code></pre>
         <pre><code>ionic cordova plugin add cordova-plugin-camera</code></pre>
         <ul>
@@ -199,6 +168,50 @@
         </ul>
       </section>
 
+      <!-- Slide 14 -->
+      <section>
+        <h2>Using A Plugin</h2>
+        <pre><code data-trim>
+          import { Camera, CameraOptions } from '@ionic-native/camera';
+          constructor(private camera: Camera) { }
+          
+          ...
+          const options: CameraOptions = {
+            quality: 100,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE
+          }
+          
+          this.camera.getPicture(options).then((imageData) => {
+            // use photo
+          }, (err) => {
+           // Handle error
+          });
+        </code></pre>
+      </section>      
+
+      <!-- Slide 13 -->
+      <section>
+        <h2>When Should I Use Ionic</h2>
+        <ul>
+          <li>Perfect For CRUD Applications</li>
+          <li>Designed For Multiple Platforms</li>
+          <li>Time Constraints</li>
+        </ul>
+      </section>
+
+      <!-- Slide 13 -->
+      <section>
+        <h2>When Should I Avoid Using Ionic</h2>
+        <ul>
+          <li>Performance Is Critical</li>
+          <li>Heavy Hardware Integration</li>
+          <li class="fragment strike">Large Multinational Corporation</li>
+          <li class="fragment">Used By McDonalds, Morgan Stanley, Diesel, Dow Jones</li>
+        </ul>
+      </section>
+
       <!-- Slide 15 -->
       <section>
         <h1>Demo</h1>
@@ -207,6 +220,14 @@
       <!-- Slide 16 -->
       <section>
         <h1>Questions</h1>
+        <ul>
+          <li>Presentation:
+            <a href="https://github.com/gnesher/ionic-intro-expense-app">https://github.com/gnesher/ionic-intro-expense-app</a>
+          </li>
+          <li>Demo:
+            <a href="https://github.com/gnesher/ionic-3-intro">https://github.com/gnesher/ionic-3-intro</a>
+          </li>
+        </ul>
       </section>
 
     </div>
